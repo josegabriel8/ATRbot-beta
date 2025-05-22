@@ -1,0 +1,7 @@
+openai
+langchain
+PyPDF2
+python-dotenv
+chromadb
+python-telegram-bot
+groq
