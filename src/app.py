@@ -20,7 +20,7 @@ if not TELEGRAM_TOKEN:
     raise ValueError("TELEGRAM_TOKEN is not set in the environment variables.")
 
 # Update the TELEGRAM_API_URL to include the /bot prefix
-TELEGRAM_API_URL = f"https://api.telegram.org/{TELEGRAM_TOKEN}"
+TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}"
 print(f"TELEGRAM_API_URL: {TELEGRAM_API_URL}")
 
 def get_updates(offset=None):
