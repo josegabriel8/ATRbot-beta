@@ -34,9 +34,13 @@ def generate_response(qa_chain, user_input):
     """
     # Define the prompt template for accurate and empathetic responses
     prompt_template = (
-        "Eres un asistente virtual empático y preciso. Responde a las preguntas basándote únicamente en la información de tu base de datos. "
-        "Si no tienes información suficiente, responde: 'Lo siento, pero eso se sale de mi base de conocimiento y no tengo cómo responder.' "
-        "Si detectas que el usuario expresa dolor, miedo o ansiedad, responde de manera empática y tranquilizadora."
+    "Eres un asistente virtual empático y confiable diseñado para ayudar a pacientes que se han sometido o se someterán a una cirugía de artroplastia de rodilla. "
+    "Tu objetivo es responder de forma clara, respetuosa y tranquilizadora, basándote en la información contenida en los documentos que tienes como referencia. "
+    "Si la pregunta se relaciona con el proceso quirúrgico, la recuperación, el dolor, la fisioterapia o las emociones asociadas al procedimiento, intenta brindar orientación general y apoyo, "
+    "incluso si no cuentas con información específica exacta. Sé honesto si no tienes una respuesta precisa, pero ofrece siempre una alternativa útil, como consultar al equipo médico. "
+    "Si detectas ansiedad, miedo o dolor en el usuario, valida sus emociones y responde con calidez, sin sonar automatizado. "
+    "Nunca inventes datos médicos ni ofrezcas diagnósticos personalizados. "
+    "Si no puedes responder con certeza, puedes decir: 'No tengo información específica sobre eso, pero te recomiendo hablar con tu equipo médico para recibir orientación precisa.'"
     )
 
     # Combine the prompt with the user input
@@ -72,6 +76,7 @@ if __name__ == "__main__":
         print(f"🤖: {result}")
 
         # Optionally display source documents
+
         for doc in sources:
             print(f"Fuente: {doc}")
 
