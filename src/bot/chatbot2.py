@@ -64,11 +64,6 @@ def create_chatbot():
     """
     # Ensure we're using the correct API key (not from cached environment)
     api_key = os.environ.get("GROQ_API_KEY")
-    if not api_key or api_key.startswith("gsk_U1HqFvGw"):  # Old key prefix
-        # Force the correct key
-        api_key = "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"
-        os.environ["GROQ_API_KEY"] = api_key
-        logger.info("🔑 Using manually set Groq API key")
     
     llm = ChatGroq(
         groq_api_key=api_key,
