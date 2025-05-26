@@ -1,7 +1,13 @@
 openai
 langchain
+langchain_groq
 PyPDF2
 python-dotenv
 chromadb
 python-telegram-bot
-groq
+sentence-transformers
+faiss-cpu
+requests
+flask
+gunicorn
+tqdm
