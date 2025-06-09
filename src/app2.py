@@ -56,18 +56,23 @@ def main():
             logger.info("🔄 Testing Groq API connection...")
             llm = ChatGroq(
                 groq_api_key=os.environ["GROQ_API_KEY"],
-                model_name="llama3-70b-8192"
+                model_name="llama3-8b-8192",
+                temperature=0.5,        # Lower temperature for more factual responses
+                max_tokens=800,         # Enough for detailed explanations
+                top_p=0.85,              # Slightly more focused sampling
+                frequency_penalty=0.2,
+                presence_penalty=0.1
             )
             start_time = time.time()
             response = llm.invoke("Test connection")
             end_time = time.time()
             logger.info(f"✅ Groq API connection successful! (Response time: {end_time-start_time:.2f}s)")
-        except Exception as e:
-            logger.error(f"❌ Groq API test failed: {e}")
+        except Exception as e:            logger.error(f"❌ Groq API test failed: {e}")
             # Continue anyway as the chatbot has error handling
         
         logger.info("🚀 Starting ATRbot with advanced features...")
-        logger.info("Features enabled: Conversational memory, Error handling, Evaluation metrics")
+        logger.info("Features enabled: Fresh conversation memory, Error handling, Evaluation metrics")
+        logger.info("Tip: Users can type /reset to clear conversation history at any time")
         
         # Run the chatbot
         run_chatbot()
