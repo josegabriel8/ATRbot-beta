@@ -16,7 +16,6 @@ if "GROQ_API_KEY" in os.environ:
 load_dotenv(override=True)
 
 # Directly set API key to ensure it's correct
-os.environ["GROQ_API_KEY"] = "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"
 
 logger.info("🔑 Environment Variables:")
 logger.info(f"GROQ_API_KEY: {os.environ.get('GROQ_API_KEY', 'NOT_FOUND')[:20]}...")
