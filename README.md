@@ -1,8 +1,8 @@
-# ATRbot: Telegram Chatbot with Retrieval-Augmented Generation (RAG)
+# KneeChat: Chatbot with Retrieval-Augmented Generation (RAG)
 
 ## Overview
 
-ATRbot is a Telegram chatbot designed to assist users by providing contextually relevant answers to their queries. It integrates a Retrieval-Augmented Generation (RAG) pipeline to retrieve information from Spanish-language PDFs and uses LLaMA 3 for conversational AI. The bot also logs conversations in JSON files for future reference.
+KneeChat is a Telegram chatbot designed to assist users by providing contextually relevant answers to their queries. It integrates a Retrieval-Augmented Generation (RAG) pipeline to retrieve information from Spanish-language PDFs and uses LLaMA 3 for conversational AI. The bot also logs conversations in JSON files for future reference.
 
 ---
 
